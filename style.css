@@ -23,6 +23,8 @@
    display: flex;
    flex-wrap: wrap;
    align-items: center;
+
+   animation: opAnimation2 1.5s;
 }
 
 .header__toors {
@@ -78,7 +80,10 @@
    font-weight: 600;
    font-size: 36px;
    line-height: 44px;
+   animation: opAnimation 0.7s ease-in-out;
+   transition: 0.3s;
 }
+
 @media (max-width:500px) {
    .content__h1{
       font-size: 30px;
@@ -90,6 +95,7 @@
 }
 
 .orange__button {
+   animation: opAnimation2 1s;
    display: inline-block;
    margin-top: 25px;
    color: #FFFFFF;
@@ -100,6 +106,11 @@
    font-size: 24px;
    line-height: 38px;
    padding: 35px 91px;
+   transition: 0.3s;
+   animation: opAnimation 1s;
+}
+.orange__button:hover{
+   background: #f1580b;
 }
 
 .content__about {
@@ -109,6 +120,7 @@
    line-height: 29px;
    margin-top: 26px;
    width: 483px;
+   animation: opAnimation 1s;
 
    -webkit-hyphens: auto;
    -moz-hyphens: auto;
@@ -157,10 +169,15 @@
    left: 0;
    width: 100%;
    height: calc(100% - 5px);
-   background: rgba(0, 0, 0, 0.3);
+   background: rgba(0, 0, 0, 0.4);
    display: flex;
    justify-content: center;
    align-items: center;
+}
+
+.toors__info:hover, .trennings__info:hover{
+   border: 20px double rgba(50,50,50,0.5);
+   transition: 0.3s;
 }
 
 .toors__item img,
@@ -374,4 +391,43 @@
    line-height: 29px;
    margin-top: 70px;
    padding-bottom: 55px;
+}
+
+@keyframes opAnimation {
+   0%{
+      transform: translateY(50px);
+      opacity: 0;
+   }
+   100%{
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+@keyframes opAnimation2 {
+   0%{
+      opacity: 0;
+   }
+   100%{
+      opacity: 1;
+   }
+}
+
+
+::-webkit-scrollbar {
+   width: 10px;
+}
+ 
+ 
+::-webkit-scrollbar-track {
+   background: #fff;
+}
+ 
+ 
+::-webkit-scrollbar-thumb {
+   background: #ccc;
+}
+ 
+ 
+::-webkit-scrollbar-thumb:hover {
+   background: #555;
 }

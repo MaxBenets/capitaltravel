@@ -92,6 +92,7 @@
 
 .content__item img {
    width: 100%;
+   animation: opAnimation2 1s;
 }
 
 .orange__button {
@@ -173,11 +174,11 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   transition: 0.3s;
 }
 
 .toors__info:hover, .trennings__info:hover{
    border: 20px double rgba(50,50,50,0.5);
-   transition: 0.3s;
 }
 
 .toors__item img,
@@ -207,6 +208,12 @@
    font-size: 24px;
    line-height: 29px;
    margin-top: 26px;
+   cursor: pointer;
+}
+
+.toors__flexs, .trennings__flexs{
+   height: 500px;
+   overflow: hidden;
 }
 
 .trennings {
@@ -425,9 +432,13 @@
  
 ::-webkit-scrollbar-thumb {
    background: #ccc;
+   cursor: pointer;
 }
  
  
 ::-webkit-scrollbar-thumb:hover {
-   background: #555;
+   background: #aaa;
+}
+.blackline{
+   color: #606060;
 }

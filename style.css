@@ -331,6 +331,32 @@
 
 .about__img {
    width: 100%;
+   height: 100%;
+}
+
+.about__img_area{
+   position: relative;
+}
+.about__info{
+   position: absolute;
+   top: 0; left: 5px;
+   width: calc(100% - 9px);
+   height: calc(100% - 7px);
+   background: rgba(0,0,0,0.4);
+   transition: 0.4s;
+   opacity: 0;
+   display: flex;
+   align-items: flex-end;
+
+}
+.about__info p {
+   color: #fff;
+   margin: 20px;
+   font-size: 25px;
+   font-family: "Roboto";
+}
+.about__info:hover{
+   opacity: 1;
 }
 
 .partner {
